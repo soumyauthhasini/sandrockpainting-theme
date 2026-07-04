@@ -1,17 +1,44 @@
-	<section class="content interior container-fluid">
-		<div class="col-md-7 mx-auto">
-			<h1>Request Your Free Painting Quote</h1>
-			<h2>Residential & Commercial Painting in Northeast Ohio</h2>
-			<div class="line">&nbsp;</div>
+<?php
+if (!empty($args)) :
+    extract($args);
+?>
 
-			<p>Call or email us today for a free consultation. We look forward to hearing from you and discussing your painting job!</p>
-			<a name="form1927222641" id="formAnchor1927222641"></a>
-			<script src="https://fs10.formsite.com/include/form/embedManager.js?1927222641"></script>
-			<script>
-			EmbedManager.embed({
-				key: "https://fs10.formsite.com/res/showFormEmbed?EParam=B6fiTn-RcO6FzDlUrrFqsONXuLV5uNUDvTPdP-dq6KM&1927222641",
-				width: "100%"
-			});
-			</script>
-		</div>
-	</section>
+<section class="content interior container-fluid">
+    <div class="col-md-7 mx-auto">
+
+        <?php if (!empty($title)) : ?>
+            <h1><?= $title; ?></h1>
+        <?php endif; ?>
+
+        <?php if (!empty($subtitle)) : ?>
+            <h2><?= $subtitle; ?></h2>
+        <?php endif; ?>
+
+        <div class="line">&nbsp;</div>
+
+        <?php if (!empty($description)) : ?>
+            <?= $description; ?>
+        <?php endif; ?>
+
+        <?php if (!empty($description_two)) : ?>
+            <?= $description_two; ?>
+        <?php endif; ?>
+
+        <?php if (!empty($cta_button_one) || !empty($cta_button_two)) : ?>
+            <div class="text-center mt-4">
+                <?php
+                if (!empty($cta_button_one)) :
+                    echo customCta($cta_button_one, 'btn btn-sm me-2');
+                endif;
+
+                if (!empty($cta_button_two)) :
+                    echo customCta($cta_button_two, 'btn btn-sm');
+                endif;
+                ?>
+            </div>
+        <?php endif; ?>
+
+    </div>
+</section>
+
+<?php endif; ?>
