@@ -1,5 +1,5 @@
 <?php
-    $bannerDetails = [
+    $galleryDetails = [
         'heading'               => get_sub_field('heading') ?: '',
         'class'                 => get_sub_field('class') ?: '',
         'banner_subtitle'       => get_sub_field('banner_subtitle') ?: '',
@@ -9,9 +9,6 @@
         'cta_three'             => get_sub_field('cta_three') ?: '',
         'cta_four'              => get_sub_field('cta_four') ?: '',
         'slider_image'          => get_sub_field('slider_image') ?: '',
-        'banner_image'          => get_sub_field('banner_image') ?: '',
-        'extra_banner_image'    => get_sub_field('extra_banner_image') ?: '',
-
     ];
 
- get_template_part( 'flexible-content/banner/banner', get_sub_field('banner_type')['value'], $bannerDetails);
+ get_template_part( 'flexible-content/banner/banner', get_sub_field('banner_type')['value'], $galleryDetails);
