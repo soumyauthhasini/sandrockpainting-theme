@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Times New Roman Cyr';
+    src: url('TimesNRCyrMT-Bold.woff2') format('woff2'),
+        url('TimesNRCyrMT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
