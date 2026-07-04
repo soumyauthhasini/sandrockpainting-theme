@@ -8,7 +8,12 @@
             <p><small><em>Click or tap the images below for more.</em></small></p>
         </div>
         <div class="row">
-            <div class="col-6 col-xl-4 galleryPreview"><a href="gallery-commercial-interior.php"><img src="<?=get_template_directory_uri();?>/assets/photos/gallery/commercial-interior-painting.webp" class="img-fluid"><br>Commercial Interior Painting</a></div>
+            <div class="col-6 col-xl-4 galleryPreview">
+                <a href="gallery-commercial-interior.php">
+                    <img src="<?=get_template_directory_uri();?>/assets/photos/gallery/commercial-interior-painting.webp" class="img-fluid">
+                    <br>Commercial Interior Painting
+                </a>
+            </div>
             <div class="col-6 col-xl-4 galleryPreview"><a href="gallery-commercial-exterior.php"><img src="<?=get_template_directory_uri();?>/assets/photos/gallery/commercial-exterior-painting.webp" class="img-fluid"><br>Commercial Exterior Painting</a></div>
             <div class="col-6 col-xl-4 galleryPreview"><a href="gallery-interior-painting.php"><img src="<?=get_template_directory_uri();?>/assets/photos/gallery/residential-interior-painting.webp" class="img-fluid"><br>Residential Interior Painting</a></div>
             <div class="col-6 col-xl-4 galleryPreview"><a href="gallery-exterior-painting.php"><img src="<?=get_template_directory_uri();?>/assets/photos/gallery/residential-exterior-painting.webp" class="img-fluid"><br>Residential Exterior Painting</a></div>
