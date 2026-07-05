@@ -927,3 +927,6 @@ footer a:hover {
   border: none;
 }
 
+.full-content blockquote {
+  margin-left: 1.5rem !important;
+}
