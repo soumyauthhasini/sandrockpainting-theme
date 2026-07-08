@@ -50,7 +50,7 @@
 <!-- end structured data --> 
 
 <!-- start ElfSight script call for Google reviews --> 
-<script>
+<!-- <script>
       javascript_deferred.prototype[get_deferred_id()] = function() {
         $.getScript('https://apps.elfsight.com/p/platform.js');
       }
@@ -61,7 +61,7 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-TX59QH8');
       }
-      </script> 
+      </script>  -->
 <!-- end ElfSight script call for Google reviews -->
 <?php wp_head();?>
 </head>
