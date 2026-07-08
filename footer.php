@@ -1,49 +1,35 @@
 <!-- start footer =========================================================================================================== -->
-<footer class="container-fluid">
+<footer class="container-fluid footer-main">
   <div class="container-xl">
     <div class="row">
       <div class="col-md-6 col-lg-3">
-        <h4>Contact Us</h4>
-        <p>
-          795 Sharon Dr. Suite 201<br />
-          Westlake, OH 44145
-        </p>
-        <p>
-          <a href="tel:4404659395" title="Call Sandrock Painting"><i class="bi bi-telephone-fill"></i> 440-465-9395</a>
-        </p>
+        <?=get_field('address', 'option')?>
       </div>
+      <?php if(!empty(get_field('hours', 'option'))):?>
+        <div class="col-md-6 col-lg-3">
+          <?=get_field('hours', 'option');?>
+        </div>
+      <?php endif; ?>
+      <?php if(!empty(get_field('services', 'option'))):?>
       <div class="col-md-6 col-lg-3">
-        <h4>Our Hours</h4>
-        <ul>
-          <li>Monday - Sunday: 7:00am - 6:00pm</li>
-          <li>Call any time!</li>
-        </ul>
+        <?=get_field('services', 'option');?>
       </div>
+      <?php endif; ?>
+      <?php if(!empty(get_field('social', 'option'))):?>
       <div class="col-md-6 col-lg-3">
-        <h4>Our Services</h4>
-        <ul>
-          <li><a href="#">Residential Interior Painting</a></li>
-          <li><a href="#">Residential Exterior Painting</a></li>
-          <li><a href="#">Cabinet Refinishing</a></li>
-          <li><a href="#">Commercial Painting</a></li>
-        </ul>
+        <?=get_field('social', 'option');?>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <h4>Social</h4>
-        <p>
-          <a href="https://www.facebook.com/SandrockPaintingCLE/" target="_blank"><i class="bi bi-facebook"></i></a><a href=""><i class="bi bi-instagram"></i></a>
-        </p>
-      </div>
+      <?php endif; ?>
     </div>
   </div>
 </footer>
+ <?php if(!empty(get_field('subfooter', 'option'))):?>
 <div class="subFooter container-fluid">
-  <p>&copy; Sandrock Painting</p>
-	<p><a href="#">Privacy Policy</a></p>
-  <p><a href="https:wsohio.com" target="_blank">Website design and hosting by Website Solutions</a></p>
+  <?=get_field('subfooter', 'option');?>
 </div>
+<?php endif; ?>
 <!-- end footer =========================================================================================================== --> 
-
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lightbox-plus-jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <?php wp_footer();?>
 </body>

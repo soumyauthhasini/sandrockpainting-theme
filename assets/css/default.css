@@ -333,12 +333,12 @@ a:hover.dropdown-item {
     margin-top: 135px;
   }
 }
-		  .heroLeft {
+		  /* .heroLeft {
 			  background-image: url("../photos/backHeroHomeResidential.webp");
 		  }
 		  .heroRight {
 			  background-image: url("../photos/backHeroHomeCommercial.webp");
-		  }
+		  } */
 	@media (min-width:768px) {
 		.heroLeft {
 			 border-right:4px solid #3e322f;
@@ -929,4 +929,23 @@ footer a:hover {
 
 .full-content blockquote {
   margin-left: 1.5rem !important;
+}
+
+.cities-list ul {
+    column-count: 3;
+    column-gap: 2rem;
+}
+
+.cities-list li {
+    break-inside: avoid;
+}
+
+@media (max-width: 767px) {
+    .cities-list ul {
+        column-count: 1;
+    }
+}
+
+.container-fluid h4 {
+    color:#c0c0c0 !important;
 }

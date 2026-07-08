@@ -5,7 +5,7 @@ if(!empty($args)):
 <section class="content index container-fluid normal-single-content">
     <div class="col-md-7 mx-auto">
         <?php if($title){ ?>
-            <h2><?=$title;?></h2>
+            <h1><?=$title;?></h1>
         <?php } ?>
         <div class="line">&nbsp;</div>
         <?=$description;?>

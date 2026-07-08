@@ -183,21 +183,66 @@ if( get_theme_mod('custom_field_checkbox') == 1){
   add_action('init', 'add_custom_taxonomies_and_post_types', 0);
 
 
-  function custom_nav_menu_li_class($classes, $item, $args) {
+// function custom_nav_menu_li_class($classes, $item, $args) {
+//     if (isset($args->li_class)) {
+//         $classes[] = $args->li_class;
+//     }
+//     return $classes;
+// }
+// add_filter('nav_menu_css_class', 'custom_nav_menu_li_class', 10, 3);
+
+// function custom_nav_menu_link_class($atts, $item, $args) {
+//     if (isset($args->link_class)) {
+//         $atts['class'] = $args->link_class;
+//     }
+//     return $atts;
+// }
+// add_filter('nav_menu_link_attributes', 'custom_nav_menu_link_class', 10, 3);
+
+function custom_nav_menu_li_class($classes, $item, $args) {
+
     if (isset($args->li_class)) {
         $classes[] = $args->li_class;
     }
+
+    // Parent menu with children
+    if (in_array('menu-item-has-children', $classes)) {
+        $classes[] = 'dropdown';
+    }
+
     return $classes;
 }
 add_filter('nav_menu_css_class', 'custom_nav_menu_li_class', 10, 3);
 
 function custom_nav_menu_link_class($atts, $item, $args) {
-    if (isset($args->link_class)) {
-        $atts['class'] = $args->link_class;
+
+    $classes = $item->classes;
+
+    // Parent dropdown
+    if (in_array('menu-item-has-children', $classes)) {
+        $atts['class'] = 'nav-link dropdown-toggle';
+        $atts['data-bs-toggle'] = 'dropdown';
+        $atts['aria-expanded'] = 'false';
+        $atts['role'] = 'button';
     }
+    // Submenu link
+    elseif ($item->menu_item_parent) {
+        $atts['class'] = 'dropdown-item';
+    }
+    // Normal menu
+    else {
+        $atts['class'] = 'nav-link';
+    }
+
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'custom_nav_menu_link_class', 10, 3);
+
+function bootstrap_submenu_class($classes, $args, $depth) {
+    $classes = ['dropdown-menu'];
+    return $classes;
+}
+add_filter('nav_menu_submenu_css_class', 'bootstrap_submenu_class', 10, 3);
 
 
 // ------------------------------------- Custom Function Soumya -------------------------------

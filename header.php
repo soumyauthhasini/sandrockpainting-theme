@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://www.sandrockpainting.com" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/default.css?v=<?php echo filemtime(get_template_directory() . '/assets/css/default.css'); ?>" type="text/css" media="all">
-
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/lightbox.css" rel="stylesheet">
 
 <!-- start structured data --> 
 <script type="application/ld+json">
@@ -70,9 +70,13 @@
 <header class="container-fluid">
   <div class="ms-xl-5 me-xl-5">
     <div class="row">
+      <?php if(!empty(get_field('header_logo', 'option'))):?>
       <div class="col-lg-3 col-xxl-2 headerLogo">
-        <a href="<?=esc_url(home_url('/'));?>"><img src="<?=get_template_directory_uri();?>/assets/graphics/logoSandrock.webp" alt="Sandrock Painting logo" /></a>
+        <a href="<?=esc_url(home_url('/'));?>">
+          <img src="<?=get_field('header_logo', 'option')['url']?>" alt="<?=get_field('header_logo', 'option')['alt']?>" />
+        </a>
       </div>
+      <?php endif; ?>
       <div class="col-lg-12 col-xxl-8 headerNav order-lg-3 order-xxl-2">
         <!-- start navbar -->
         <nav class="navbar navbar-expand-lg navbar-light" aria-label="Main Navbar">
@@ -89,52 +93,21 @@
                     'container' => '' , 
                     'items_wrap' => '%3$s', 
                     'li_class'  => 'nav-item',
-                    'link_class'     => 'nav-link'
+                    'link_class'     => 'nav-link',
+                      'depth'          => 2,
                     )); 
                 ?>
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="index">Home</a>header_nav
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.php">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Residential</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="residential-interior-painting.php">Residential Interior Painting</a></li>
-                    <li><a class="dropdown-item" href="residential-exterior-painting.php">Residential Exterior Painting</a></li>
-                    <li><a class="dropdown-item" href="cabinet-refinishing.php">Cabinet Refinishing</a></li>
-                    
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Commercial</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="commercial-interior-painting.php">Commercial Interior Painting</a></li>
-                    <li><a class="dropdown-item" href="commercial-exterior-painting.php">Commercial Exterior Painting</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="gallery.php">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="reviews.php">Reviews</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="careers.php">Careers</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.php">Contact</a>
-                </li> -->
               </ul>
             </div>
           </div>
         </nav>
         <!-- end navbar -->
       </div>
+      <?php if(!empty(get_field('phone_no', 'option'))):?>
       <div class="col-lg-9 col-xxl-2 headerPhone order-lg-2 order-xxl-3">
-        <a href="tel:4404659395"><i class="bi bi-telephone-fill"></i> 440-465-9395</a>
+        <a href="<?=get_field('phone_no', 'option')['url']?>"><i class="bi bi-telephone-fill"></i> <?=get_field('phone_no', 'option')['title']?></a>
       </div>
+      <?php endif; ?>
     </div>
   </div>
 </header>

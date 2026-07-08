@@ -10,6 +10,7 @@ if(!empty($args)):
       <?php if (!empty($args['subtitle'])) : ?>
           <p><?= wp_kses_post($args['subtitle']); ?></p>
       <?php endif; ?>
+      <?php if ($args['description'] != '') { echo $args['description']; } ?>
 
       <?php if (!empty($args['cta_button_one'])) : ?>
           <p>
