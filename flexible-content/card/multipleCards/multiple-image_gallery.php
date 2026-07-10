@@ -16,12 +16,12 @@ if (!empty($args)) :
                 if ($description != '') : 
                     echo $description;
                 endif;
-                if(!empty($gallery_images)):
+                if(!empty($gallery_image)):
             ?>
                 <div class="d-flex justify-content-center flex-wrap gallery">
-                    <?php foreach ($gallery_images as $item) : ?>
-                        <a href="<?=$item['url'];?>" data-lightbox="Commercial">
-                            <img src="<?=$item['url'];?>" class="img-fluid">
+                    <?php foreach ($gallery_image as $item) : ?>
+                        <a href="<?=$item['preview_image']['url'];?>" data-lightbox="Commercial">
+                            <img src="<?=$item['list_image']['url'];?>" class="img-fluid">
                         </a>
                     <?php endforeach; ?>
 
