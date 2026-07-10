@@ -29,8 +29,12 @@
 </div>
 <?php endif; ?>
 <!-- end footer =========================================================================================================== --> 
+ <script src="https://jquery.com" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lightbox-plus-jquery.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.12.0/dist/js/lightbox.min.js"></script>
+
 <?php wp_footer();?>
 </body>
 </html>

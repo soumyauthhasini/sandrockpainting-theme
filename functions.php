@@ -86,7 +86,7 @@ require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
 if( get_theme_mod('custom_field_checkbox') == 1){
   require get_template_directory() . '/acf.php';
 }
-// require get_template_directory() . '/inc/creative-customizer.php';
+require get_template_directory() . '/inc/creative-customizer.php';
 // require get_template_directory() . '/inc/enque-style-script.php';
 // require get_template_directory() . '/inc/add_meta_hook.php';
 // require get_template_directory() . '/inc/woo-mail-function.php';

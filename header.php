@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://www.sandrockpainting.com" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/default.css?v=<?php echo filemtime(get_template_directory() . '/assets/css/default.css'); ?>" type="text/css" media="all">
-<link href="<?php echo get_template_directory_uri(); ?>/assets/css/lightbox.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/lightbox.css?v=2" rel="stylesheet">
 
 <!-- start structured data --> 
 <script type="application/ld+json">
