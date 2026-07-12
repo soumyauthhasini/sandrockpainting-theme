@@ -5,10 +5,10 @@ if(!empty($args)):
     <section class="hero container-fluid">
         <div class="textHolder col-md-8">
             <?php if($heading){ ?>
-                <p>Bringing Life to Your Walls</p>
+                <p><?=$heading;?></p>
             <?php } ?>
             <?php if($banner_subtitle){ ?>
-                <p>Professional Residential Painting Solutions</p>
+                <p><?=$banner_subtitle;?></p>
              <?php } if(!empty($args['cta_one']) || !empty($args['cta_two'])):?>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start col-8">
                     <?php
