@@ -8,7 +8,6 @@
         'cta_two'               => get_sub_field('cta_two') ?: '',
         'cta_three'             => get_sub_field('cta_three') ?: '',
         'cta_four'              => get_sub_field('cta_four') ?: '',
-        'slider_image'          => get_sub_field('slider_image') ?: '',
         'banner_image'          => get_sub_field('banner_image') ?: '',
         'extra_banner_image'    => get_sub_field('extra_banner_image') ?: '',
 

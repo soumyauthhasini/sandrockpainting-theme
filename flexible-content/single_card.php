@@ -9,7 +9,6 @@
         'image_two'             => get_sub_field('image_two') ?: '',
         'cta_button_one'        => get_sub_field('cta_button_one') ?: '',
         'cta_button_two'        => get_sub_field('cta_button_two') ?: '',
-        'bg_image'              => get_sub_field('bg_image') ?: '',
         
     ];
 
